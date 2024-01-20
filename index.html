@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muay Thai Combination Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>Muay Thai Combination Builder - The art of 8 limbs</h1>
+
+    <div id="combinationOutput">
+        <!-- Display the generated combination here -->
+    </div>
+
+    <div id="sectionsContainer">
+        <div class="strikeSection" id="leftPunchSection">
+            <h2>Left Punch</h2>
+            <!-- Buttons for left punch strikes -->
+            <button onclick="selectPunch('Jab')">Jab</button>
+            <button onclick="selectPunch('Body Jab')">Body Jab</button>
+            <button onclick="selectPunch('Left Hook')">Left Hook</button>
+            <button onclick="selectPunch('Left Uppercut')">Left Uppercut</button>
+            <button onclick="selectPunch('Left Overhand')">Left Overhand</button>
+            <button onclick="selectPunch('Left Body Hook')">Left Body Hook</button>
+            <button onclick="selectPunch('Left Body Uppercut')">Left Body Uppercut</button>
+        </div>
+
+        <div class="strikeSection" id="rightPunchSection">
+            <h2>Right Punch</h2>
+            <!-- Buttons for right punch strikes -->
+            <button onclick="selectPunch('RightCross')">Cross</button>
+            <button onclick="selectPunch('Body Cross')">Body Cross</button>
+            <button onclick="selectPunch('Right Hook')">Right Hook</button>
+            <button onclick="selectPunch('Right Uppercut')">Right Uppercut</button>
+            <button onclick="selectPunch('Right Overhand')">Right Overhand</button>
+            <button onclick="selectPunch('Right Body Hook')">Right Body Hook</button>
+            <button onclick="selectPunch('Right Body Uppercut')">Right Body Uppercut</button>
+        </div>
+
+        <div class="strikeSection" id="leftKickSection">
+            <h2>Left Kick</h2>
+            <!-- Buttons for left kick strikes -->
+            <button onclick="selectKick('Left LowKick')">Left Low Kick</button>
+            <button onclick="selectKick('Left MiddleKick')">Left Middle Kick</button>
+            <button onclick="selectKick('Left HighKick')">Left High Kick</button>
+            <button onclick="selectKick('Left QuestionMark Kick')">Left Question Mark Kick</button>
+            <button onclick="selectKick('Left Teep')">Left Teep</button>
+            <button onclick="selectKick('Left Spinning Kick')">Left Spinning Kick</button>
+        </div>
+
+        <div class="strikeSection" id="rightKickSection">
+            <h2>Right Kick</h2>
+            <!-- Buttons for right kick strikes -->
+            <button onclick="selectKick('Right LowKick')">Right Low Kick</button>
+            <button onclick="selectKick('Right MiddleKick')">Right Middle Kick</button>
+            <button onclick="selectKick('Right HighKick')">Right High Kick</button>
+            <button onclick="selectKick('Right QuestionMarkKick')">Right Question Mark Kick</button>
+            <button onclick="selectKick('Right Teep')">Right Teep</button>
+            <button onclick="selectKick('Right SpinningKick')">Right Spinning Kick</button>
+        </div>
+
+        <div class="strikeSection" id="leftKneeSection">
+            <h2>Left Knee</h2>
+            <!-- Buttons for left knee strikes -->
+            <button onclick="selectKnee('Left Spear Knee')">Left Spear Knee</button>
+            <button onclick="selectKnee('Left Push Knee')">Left Push Knee</button>
+            <button onclick="selectKnee('Left Knee To Head')">Left Knee to Head</button>
+            <button onclick="selectKnee('Left Jumping Knee')">Left Jumping Knee</button>
+        </div>
+
+        <div class="strikeSection" id="rightKneeSection">
+            <h2>Right Knee</h2>
+            <!-- Buttons for right knee strikes -->
+            <button onclick="selectKnee('Right Spear Knee')">Right Spear Knee</button>
+            <button onclick="selectKnee('Right Push Knee')">Right Push Knee</button>
+            <button onclick="selectKnee('Right Knee To Head')">Right Knee to Head</button>
+            <button onclick="selectKnee('Right Jumping Knee')">Right Jumping Knee</button>
+        </div>
+
+        <div class="strikeSection" id="leftElbowSection">
+            <h2>Left Elbow</h2>
+            <!-- Buttons for left elbow strikes -->
+            <button onclick="selectElbow('Left UpElbow')">Left Up Elbow</button>
+            <button onclick="selectElbow('Left NormalElbow')">Left Normal Elbow</button>
+            <button onclick="selectElbow('Left Spinning Elbow')">Left Spinning Elbow</button>
+        </div>
+
+        <div class="strikeSection" id="rightElbowSection">
+            <h2>Right Elbow</h2>
+            <!-- Buttons for right elbow strikes -->
+            <button onclick="selectElbow('Right UpElbow')">Right Up Elbow</button>
+            <button onclick="selectElbow('Right NormalElbow')">Right Normal Elbow</button>
+            <button onclick="selectElbow('Right Spinning Elbow')">Right Spinning Elbow</button>
+        </div>
+    </div>
+
+    <button id="saveButton" onclick="saveCombination()">Save Combination</button>
+    <button id="clearButton" onclick="clearCombination()">Clear Combination</button>
+    <button id="exportTextButton" class="saveExportButton" onclick="exportCombination('text')">Export as Text</button>
+    <button id="exportImageButton" class="saveExportButton" onclick="exportCombination('image')">Export as Image</button>
+
+
+    <div id="savedCombinations">
+        <h2>Saved Combinations</h2>
+        <!-- Display saved combinations here -->
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
